@@ -82,6 +82,18 @@ header ul li a {
   font-weight: 500;
 }
 
+.extend {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.view {
+  display: block;
+  opacity: 1;
+  transition: opacity 5.5s ease-in-out;
+}
+
 .textBox a {
   display: inline-block;
   margin-top: 20px;

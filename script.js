@@ -6,6 +6,7 @@ const starbucks = document.querySelector('.starbucks');
 const fondoCirculo = document.querySelector('.circulo');
 const span = document.querySelector('.span');
 const ancla = document.querySelector('.ancla');
+const parrafo = document.querySelector('.extend');
 
 imagen1.addEventListener("click", function() {
     imgSlider('./imagenes/img1.png');
@@ -17,6 +18,17 @@ imagen2.addEventListener("click", function() {
 
 imagen3.addEventListener("click", function() {
     imgSlider('./imagenes/img3.png');
+});
+
+ancla.addEventListener('click', function(event){
+    event.preventDefault();
+    if(parrafo.className === 'extend'){
+        parrafo.className = 'view';
+        parrafo.style.opacity = '1';
+    }else if(parrafo.className === 'view'){
+        parrafo.className = 'extend';
+        parrafo.style.opacity = '0';
+    }
 });
 
 function imgSlider(imagenEntrante){
